@@ -20,18 +20,11 @@ public class Spring01Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		
-		// for (int a = 1; a < 30; a++) {
-			
-		// 	this.userController.saves(a, 2, "data", "texto");
-		// }
-
 		for (int i = 1; i <= 365; i++) {
+
 			if (this.userController.findToComplete(i) == true) {
 				this.userController.redefinir(i);
 			}
 		}
-
-
 	}
 }

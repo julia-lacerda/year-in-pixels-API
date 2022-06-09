@@ -1,5 +1,7 @@
 package br.anhembi.spring01.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -48,14 +50,12 @@ public class UserController {
             return true;
         }else
         return false;
-
     }
 
     @GetMapping
-    public ResponseEntity<User> findById(int id) {
-        User user = this.UserRepo.findById(id).orElse(null);
-            return ResponseEntity.ok(user);
-
+    public ResponseEntity<List<User>> getAll() {
+        List<User> user = this.UserRepo.findAll();
+        return ResponseEntity.ok(user);
     }
 
 }

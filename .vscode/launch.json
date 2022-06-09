@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Spring01Application",
+            "request": "launch",
+            "mainClass": "br.anhembi.spring01.Spring01Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch Application",
             "request": "launch",
             "mainClass": "br.anhembi.spring01.Application",
