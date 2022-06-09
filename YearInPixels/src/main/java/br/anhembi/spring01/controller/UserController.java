@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -27,12 +26,6 @@ public class UserController {
     public void saves(int id, int humor, String data, String texto) {
         User user = new User(id,humor,data,texto);
         this.UserRepo.save(user);
-    }
-
-    @PatchMapping
-    public void savename(int id, String nome) {
-        User user = new User(id,nome);
-        this.UserRepo.save(user);        
     }
 
     @PostMapping

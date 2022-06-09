@@ -11,18 +11,12 @@ public class User {
     private int humor;
     private String data;
     private String texto;
-    private String nome;
     
     public User(int id, int humor, String data, String texto) {
         this.id = id;
         this.humor = humor;
         this.data = data;
         this.texto = texto;
-    }
-
-    public User(int id, String nome){
-        this.id = id;
-        this.nome = nome;
     }
     
     public User() {}
@@ -50,14 +44,6 @@ public class User {
     }
     public void setTexto(String texto) {
         this.texto = texto;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     
